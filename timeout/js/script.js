@@ -1,38 +1,11 @@
-const btn = document.querySelector('.btn');
-let timerId,
-    i = 0;
+"use strict"
 
-function myAnimation() {
-    const elem = document.querySelector('.box');
-    let pos = 0;
+let start = new Date();
 
-    const id = setInterval(frame, 100);
+for (let i = 0; i < 100000; i++) {
+    let some = i ** 3;
+}
 
-    function frame() {
-        if (pos == 300) {
-            clearInterval(id);
-        } else {
-            pos++;
-            elem.style.top = pos + 'px';
-            elem.style.left = pos + 'px';
-        }
-    };
-};
+let end = new Date();
 
-btn.addEventListener('click', myAnimation);
-
-// clearInterval(timerId);
-
-// function logger () {
-//     if (i === 3) {
-//         clearInterval(timerId);
-//     }
-//     console.log('text');
-//     i++;
-// }
-
-// let id = setTimeout(function log() {
-//     console.log('Hello');
-//     id = setTimeout(log, 500);
-// },500);
-
+alert(`Цикл отработал за ${end - start} миллисекунд`);
